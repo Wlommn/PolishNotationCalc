@@ -9,7 +9,7 @@
 typedef struct ListNode
 {
     int id;
-    int value;
+    char value;
     struct ListNode* next;
 } ListNode;
 
@@ -20,20 +20,20 @@ typedef struct LinkedList
     int size;
 } List;
 
-List* Initialise(List* newList);
+List* InitList(List* newList);
 
 List* AddFront(List* currentList);
 List* AddEnd(List* currentList);
 
-ListNode* FindElement(List* currentList, int value);
+ListNode* FindElement(List* currentList, char value);
 ListNode* FindElementID(List* currentList, int id);
 
 List* DeleteNode(List* currentList, ListNode* node);
 List* DeleteList(List* currentList);
 
 List* CorrectListID(List* currentList);
-ListNode* CreateNode(int newNodeValue, int newNodeId);
+ListNode* CreateNode(char newNodeValue, int newNodeId);
 ListNode* MemmoryAllocate();
-ListNode* SetValue();
+ListNode* SetValue(ListNode* node, char newValue);
 
 #endif  //  LIB_LINKEDLIST_LINKEDLIST_H_

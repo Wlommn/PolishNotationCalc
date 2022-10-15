@@ -8,11 +8,19 @@
 #include "../linkedList/linkedList.h"
 #include "../DEFINES.h"
 
-struct stack {
+typedef struct Stack {
+    ListNode* top;
     int size;
-    int value;
-    struct stack* next;
-};
+} Stack;
 
+
+Stack* InitStack(Stack* newStack);
+
+int PushStackItem(Stack* currentStack, char value);
+char PopStackItem(Stack* currentStack);
+
+void RemoveStack(Stack* currentStack);
+
+int GetStackSize(Stack* currentStack);
 
 #endif  //  LIB_STACK_STACK_H_

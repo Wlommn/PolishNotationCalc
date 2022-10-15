@@ -1,6 +1,6 @@
 #include "linkedList.h"
 
-List* Initialise(List* newList) {
+List* InitList(List* newList) {
     newList = malloc(sizeof(List));
     newList->first = CreateNode(DEFAULT_VALUE, 1);
     newList->last = newList->first;
@@ -26,7 +26,7 @@ List* AddEnd(List* currentList) {
     return currentList;
 }
 
-ListNode* FindElement(List* currentList, int value) {
+ListNode* FindElement(List* currentList, char value) {
     ListNode* currentNode = currentList->first;
 
     for (; currentNode != NULL; currentNode = currentNode->next) {
@@ -78,7 +78,7 @@ List* CorrectListID(List* currentList) {
     return currentList;
 }
 
-ListNode* CreateNode(int newNodeValue, int newNodeId) {
+ListNode* CreateNode(char newNodeValue, int newNodeId) {
     ListNode* newNode = MemmoryAllocate();
     newNode->value = newNodeValue;
     newNode->id = newNodeId;
@@ -91,7 +91,7 @@ ListNode* MemmoryAllocate() {
     return current;
 }
 
-ListNode* SetValue(ListNode* node, int newValue) {
+ListNode* SetValue(ListNode* node, char newValue) {
     node->value = newValue;
     return node;
 }
