@@ -6,10 +6,8 @@
 #include <string.h>
 #include "../stack/stack.h"
 
-#define VALID_STRING "0123456789sinctlo-+^"
-
 char* Input(int* stringSize);
 
-char* ValidationInput(char* inputString, int inputStingSize, char* validString);
+int ValidationInput(char* inputedString, char* validString);
 
 #endif  //  LIB_INPUT_INPUT_H_
