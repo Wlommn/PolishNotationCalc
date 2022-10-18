@@ -1,34 +1,42 @@
 #include "parser.h"
 
-int CheckNumber(char currentSimbol) {
-    int result = FALSE;
+char* ParseNumber() {
+}
 
-    if (strchr(VALID_NUMBERS, currentSimbol) != NULL) {
-        result = TRUE;
+bool CheckNumber(char currentSimbol) {
+    bool result = false;
+
+    if (strchr(IS_NUMBER, currentSimbol) != NULL) {
+        result = true;
     }
     return result;
 }
 
-int CheckFunctionLogarithm(char currentSimbol) {
-
+bool CheckFunctionLogarithm(char* string, int index) {
+    bool result = false;
+    char subString[2] = {string[index], string[index + 1]};
+    if (strcmp(subString, "ln") == 0) {
+        result = true;
+    }
+    return result;
 }
 
-int CheckFunctionTangent(char currentSimbol) {
+// int CheckFunctionTangent(char currentSimbol) {
     
-}
+// }
 
-int CheckFunctionCotangent(char currentSimbol) {
+// int CheckFunctionCotangent(char currentSimbol) {
     
-}
+// }
 
-int CheckFunctionSinus(char currentSimbol) {
+// int CheckFunctionSinus(char currentSimbol) {
     
-}
+// }
 
-int CheckFunctionCosinus(char currentSimbol) {
+// int CheckFunctionCosinus(char currentSimbol) {
     
-}
+// }
 
-int ChecHooks(char currentSimbol) {
+// int ChecHooks(char currentSimbol) {
 
-}
+// }
