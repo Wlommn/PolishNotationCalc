@@ -8,6 +8,6 @@
 
 char* Input(int* stringSize);
 
-int ValidationInput(char* inputedString, char* validString);
+bool ValidationInput(char* inputedString, char* validString);
 
 #endif  //  LIB_INPUT_INPUT_H_

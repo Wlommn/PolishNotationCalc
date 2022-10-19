@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 SOURCES = ./src/main.c
-LIBS = ./lib/input/input.c ./lib/linkedList/linkedList.c ./lib/stack/stack.c ./lib/parser/parser.c
+LIBS = ./lib/input/input.c ./lib/linkedList/linkedList.c ./lib/stack/stack.c ./lib/queue/queue.c ./lib/parser/parser.c
 OBJECTS = $(LIBS:.c=.o) $(SOURCES:.c=.o)
 
 

@@ -14,7 +14,7 @@ typedef struct Stack {
 } Stack;
 
 
-Stack* InitStack(Stack* newStack);
+Stack* InitStack();
 
 int PushStackItem(Stack* currentStack, char value);
 char PopStackItem(Stack* currentStack);

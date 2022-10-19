@@ -6,13 +6,15 @@
 int main() {
     int stringSize = 0;
     char* inputedString = Input(&stringSize);
-    if (ValidationInput(inputedString, VALID_STRING) == 1) {
-        for (int i = 0; i < stringSize; i++) {
-            printf("%c", inputedString[i]);
+    Queue* lexems = GetPostfixLexems(inputedString, stringSize);
+    if (ValidationInput(inputedString, VALID_STRING)) {
+        while (lexems->size > 0) {
+            printf("%s", Dequeue(lexems));
         }
     } else {
         printf("n/a");
     }
     free(inputedString);
+    FreeQueue(lexems);
     return 0;
 }

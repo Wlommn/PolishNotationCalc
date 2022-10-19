@@ -1,7 +1,8 @@
 #ifndef LIB_DEFINES_H_
 #define LIB_DEFINES_H_
 
-#define VALID_STRING "0123456789sinctlaoxy()-+^"
+#define VALID_STRING "0123456789sinctlaoxy()-+*/^"
+#define IS_OPERATOR "+-*/sctl~" 
 #define IS_NUMBER "0123456789"
 
 typedef enum bool
@@ -14,12 +15,11 @@ typedef enum bool
 
 typedef enum PRIOR
 {
+    NAN = 0,
     HOOKS = 1,
-    SUM = 2,
-    MIN = 2,
-    MUL = 3,
-    DIV = 3,
-    POW = 4,
+    SUM_MIN = 2,
+    MUL_DIV = 3,
+    FUNC_POW = 4,
     UMIN = 5
 } PRIOR;
 

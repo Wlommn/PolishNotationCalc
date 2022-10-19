@@ -1,7 +1,7 @@
 #include "stack.h"
 
-Stack* InitStack(Stack* newStack) {
-    newStack = malloc(sizeof(newStack));
+Stack* InitStack() {
+    Stack* newStack = malloc(sizeof(newStack));
     if (newStack != NULL) {
         newStack->size = 0;
         newStack->top = NULL;

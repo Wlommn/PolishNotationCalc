@@ -14,12 +14,12 @@ char* Input(int* stringSize) {
     return result;
 }
 
-int ValidationInput(char* inputedString, char* validString) {
-    int result = 1;
+bool ValidationInput(char* inputedString, char* validString) {
+    bool result = true;
     int stringSize = (int)strlen(inputedString);
     for (int i = 0; i < stringSize; i++) {
         if (strchr(validString, inputedString[i]) == NULL) {
-            result = 0;
+            result = false;
             break;
         }
     }
